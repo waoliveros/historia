@@ -1,2 +1,2 @@
 # historia
-Timeline visualizer
+Event logger
