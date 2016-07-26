@@ -8,6 +8,27 @@ schema = {
         'maxlength': 50,
         'required': True,
     },
+    'date': {
+        'type': 'datetime',
+    },
+    'reference': {
+        'type': 'string',
+        'minlength': 2,
+        'maxlength': 50,
+        'required': True,
+    },
+    'details': {
+        'type': 'string',
+        'minlength': 0,
+        'maxlength': 300,
+        'required': False
+    },
+    'reporter': {
+        'type': 'string',
+        'minlength': 3,
+        'maxlength': 20,
+        'required': True,
+    }
 }
 
 event = {
