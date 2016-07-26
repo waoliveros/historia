@@ -8,7 +8,7 @@ schema = {
         'maxlength': 50,
         'required': True,
     },
-    'date': {
+    'datetime': {
         'type': 'datetime',
     },
     'reference': {
