@@ -28,7 +28,7 @@ schema = {
         'minlength': 3,
         'maxlength': 20,
         'required': True,
-    }
+    },
 }
 
 event = {
@@ -49,6 +49,6 @@ DOMAIN = {
 
 MONGO_HOST = 'localhost'
 MONGO_PORT = 27017
-MONGO_USERNAME = 'historia'
+MONGO_USERNAME = ''
 MONGO_PASSWORD = ''
 MONGO_DBNAME = 'historia'
