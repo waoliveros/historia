@@ -9,11 +9,11 @@ class MyBasicAuth(BasicAuth):
                    method):
         accounts = app.data.driver.db['accounts']
         account = accounts.find_one({'username': username})
-        return account and password == account['password']
+        return account and md5(password).hexdigest() == account['password']
 
 def set_reporter(request, lookup):
     print request
-    
+
 app = Eve(auth=MyBasicAuth)
 app.on_pre_PUT_event += set_reporter
 
