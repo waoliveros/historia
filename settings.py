@@ -1,5 +1,8 @@
+from datetime import datetime, timedelta
+
 RESOURCE_METHODS = ['GET', 'POST', 'DELETE']
 ITEM_METHODS = ['GET', 'PATCH', 'PUT', 'DELETE']
+DATE_FORMAT = '%Y-%m-%d %H:%M:%S GMT'
 
 schema = {
     'name': {
@@ -8,13 +11,20 @@ schema = {
         'maxlength': 50,
         'required': True,
     },
-    'datetime': {
+    'occurred_on': {
         'type': 'datetime',
+        'default': datetime.now(),
     },
-    'reference': {
+    'source': {
         'type': 'string',
         'minlength': 2,
         'maxlength': 50,
+        'required': True,
+    },
+    'reporter': {
+        'type': 'string',
+        'minlength': 3,
+        'maxlength': 20,
         'required': True,
     },
     'details': {
@@ -22,12 +32,6 @@ schema = {
         'minlength': 0,
         'maxlength': 300,
         'required': False
-    },
-    'reporter': {
-        'type': 'string',
-        'minlength': 3,
-        'maxlength': 20,
-        'required': True,
     },
 }
 
