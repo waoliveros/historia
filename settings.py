@@ -13,7 +13,7 @@ schema = {
     },
     'occurred_on': {
         'type': 'datetime',
-        'default': datetime.now(),
+        'default': datetime.utcnow(),
     },
     'source': {
         'type': 'string',
