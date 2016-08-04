@@ -11,11 +11,7 @@ class MyBasicAuth(BasicAuth):
         account = accounts.find_one({'username': username})
         return account and md5(password).hexdigest() == account['password']
 
-def set_reporter(request, lookup):
-    print request
-
 app = Eve(auth=MyBasicAuth)
-app.on_pre_PUT_event += set_reporter
 
 app.register_blueprint(swagger)
 app.config['SWAGGER_INFO'] = SWAGGER_INFO
